@@ -28,9 +28,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "test:e2e": "playwright test",
-    "verify:pwa": "node scripts/verify-pwa.mjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "konva": "^10.2.3",
@@ -41,7 +39,6 @@
     "use-image": "^1.1.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.0",

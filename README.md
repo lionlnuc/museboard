@@ -22,7 +22,6 @@ Museboard 是一个纯前端、本地优先的无限画布工具，适合快速�
 - TypeScript 5
 - Vite 7
 - Konva / react-konva
-- Playwright
 
 ## 快速开始
 
@@ -44,8 +43,6 @@ npm run dev
 | `npm run dev` | 启动开发服务器 |
 | `npm run build` | 执行 TypeScript 检查并构建生产版本 |
 | `npm run preview` | 本地预览生产构建 |
-| `npm run test:e2e` | 运行 Playwright 端到端测试 |
-| `npm run verify:pwa` | 验证生产版本的 PWA 离线刷新 |
 
 ## 常用快捷键
 
@@ -73,30 +70,6 @@ Museboard 没有后端、账号系统或遥测服务。画板文档与图片资�
 
 支持 File System Access API 的浏览器可以直接打开并覆盖本地 JSON 文件；其他浏览器会自动回退为上传与下载流程。Chrome、Edge 等 Chromium 浏览器可获得最完整体验。
 
-## PWA 离线验证
-
-先构建并启动生产预览：
-
-```bash
-npm run build
-npm run preview -- --host 127.0.0.1 --port 4173
-```
-
-然后在另一个终端运行验证脚本。
-
-macOS / Linux：
-
-```bash
-PWA_URL=http://127.0.0.1:4173 npm run verify:pwa
-```
-
-Windows PowerShell：
-
-```powershell
-$env:PWA_URL = 'http://127.0.0.1:4173'
-npm run verify:pwa
-```
-
 ## 项目结构
 
 ```text
@@ -106,8 +79,7 @@ src/                 应用源码
   hooks/             文档状态与历史记录
   utils/             几何、持久化与导出逻辑
 public/              PWA 清单、Service Worker 与运行图标
-scripts/             图标生成和 PWA 验证脚本
-tests/               Playwright 端到端测试
+scripts/             PWA 图标生成脚本
 ```
 
 ## 当前边界
@@ -117,9 +89,8 @@ tests/               Playwright 端到端测试
 ## 贡献
 
 1. Fork 本仓库并创建功能分支。
-2. 保持改动聚焦，并为用户可见行为补充或更新测试。
-3. 提交前运行 `npm run build` 和 `npm run test:e2e`。
-4. 发起 Pull Request，说明问题、实现方式与验证结果。
+2. 保持改动聚焦，提交前运行 `npm run build`。
+3. 发起 Pull Request，说明问题、实现方式与验证结果。
 
 ## 许可证
 

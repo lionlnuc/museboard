@@ -2,19 +2,14 @@
 node_modules/
 .npm-cache/
 
-# Build, test, and coverage output
+# Build and local audit output
 dist/
-test-results/
-playwright-report/
-coverage/
 visual-audit/
 
 # TypeScript build output
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
-playwright.config.js
-playwright.config.d.ts
 
 # Local environment and logs
 .env*
